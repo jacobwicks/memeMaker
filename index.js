@@ -151,14 +151,14 @@ app.get("/meme/:input/:url*", async (req, res) => {
 
 //text is the route
 //:input designates a parameter of the route
-app.get("/text/:input", async (req, res) => {
+app.get("/text/:input", (req, res) => {
     //the ? means optional chaining
     //input will be a string equal to whatever the user types after the route
     const input = req?.params?.input;
   
     //call the makeTextImage function
     //and wait for it to return the buffer object
-    const image = await makeTextImage(input);
+    const image = makeTextImage(input);
   
     //create the headers for the response
     //200 is HTTTP status code 'ok'
