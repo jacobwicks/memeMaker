@@ -53,7 +53,9 @@ const express = require("express");
 const app = express();
 
 //the port that the server will listen on
-const port = 8081;
+//use the process environment variable PORT
+//and if PORT is undefined, use 8081
+const port = process.env.PORT || 8081;
 
 const makeMeme = async ({
     //the url of the image to put the text on
