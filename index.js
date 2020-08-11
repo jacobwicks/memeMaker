@@ -179,10 +179,10 @@ app.get("/text/:input", async (req, res) => {
 //it defines the response to an http 'get' request
 app.get("/", (req, res) =>
   //this response will display text in the browser
-  res.send("You have reached the Meme Generator")
+  res.send("You have reached the Meme Maker")
 );
 
 //start the web server listening
 app.listen(port, () => {
-  console.log(`Meme Generator listening at on port ${port}`);
+  console.log(`Meme Maker listening at on port ${port}`);
 });
